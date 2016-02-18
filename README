@@ -1,35 +1,14 @@
-# grabsy.sh - # Change the default destination folder for os x screenshots.
-# 
-# USAGE
-# sh grabsy.sh <DIRNAME> 
-#       to make that the default destination for screenshots
-# sh grabsy.sh
-#       to revert to your default destination.  I didn't wanteit on the ~/Desktop, but you might.  Edit the config below.
-# 
-# you can edit your path so you dont have to type sh or ./ or whatever.
-# I tested this in bash on os x mavericks.  it probably won't work anywhere else.
-#
-#
-# Example:
-#
-# sh grabsy.sh DEMO
-#
-# This will create a new folder in ~/Documents/Screenshots/ called DEMO
-# like this
-# ~/Documents/Screenshots/DEMO
-#
-# Any screenshots you take using CMD+SHIFT+4 will save to DEMO.
-#
-# When you are done, you can run 
-# sh grabsy.sh
-#
-# to revert your path to the default, well to my default which is ~/Documents/Screenshots
-#
-# I have ~/Desktop (the OSX default) in the script, but commented out.  you can edit that if you want to use it.
-#
-#
-#
-#
-#
-#
-#
+Running grabsy.sh alone will trigger the system to prompt for an existing directory
+
+freedom:~ erichagstrom$ /Users/erichagstrom/grabsy.sh
+Enter destination directory for native OSX screenshots: ~/Pictures/Screenshots
+Changing screenshot destination directory to ~/Pictures/Screenshots
+freedom:~ erichagstrom$ 
+
+Adding default to the grabsy.sh command will reset the directory to system defaults
+
+freedom:~ erichagstrom$ /Users/erichagstrom/Downloads/grabsy-master/grabsy.sh default
+Changing screenshot destination directory to /Users/erichagstrom/Desktop
+
+Any screenshots you take using CMD+SHIFT+4 or CMD+SHIFT+3 will save to the new location or the default location
+depending on the option you choose. 
